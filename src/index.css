@@ -53,6 +53,10 @@ body {
   font-family: var(--font-primary);
 }
 
+.app[data-theme] {
+  position: relative;
+}
+
 main {
   position: absolute;
   top: 4.8rem;

@@ -1,3 +1,4 @@
+import { useTheme } from "../../context/ThemeContext";
 import "./Navbar.css";
 import LogoMobile from "../../assets/icons/logo-mobile.svg";
 import LogoDesktop from "../../assets/icons/logo-desktop.svg";
@@ -5,7 +6,7 @@ import IconSun from "../../assets/icons/icon-sun.svg";
 import IconMoon from "../../assets/icons/icon-moon.svg";
 
 const Navbar = () => {
-  const theme = "dark";
+  const { theme, toggleTheme } = useTheme();
   return (
     <nav className="navbar">
       <picture>
@@ -17,11 +18,11 @@ const Navbar = () => {
         <img src={LogoMobile} alt="Todo Logo" />
       </picture>
 
-      <button className="navbar__toggle">
-        {theme === "light" ? (
-          <img src={IconSun} className="navbar__icon" alt="Sun Icon" />
-        ) : (
+      <button onClick={toggleTheme} className="navbar__toggle">
+        {theme === "dark" ? (
           <img src={IconMoon} className="navbar__icon" alt="Moon Icon" />
+        ) : (
+          <img src={IconSun} className="navbar__icon" alt="Sun Icon" />
         )}
       </button>
     </nav>

@@ -1,3 +1,4 @@
+import { useTheme } from "../../context/ThemeContext";
 import "./Background.css";
 import BgMobileLight from "../../assets/images/bg-mobile-light.jpg";
 import BgDesktopLight from "../../assets/images/bg-desktop-light.jpg";
@@ -5,10 +6,10 @@ import BgMobileDark from "../../assets/images/bg-mobile-dark.jpg";
 import BgDesktopDark from "../../assets/images/bg-desktop-dark.jpg";
 
 const Background = () => {
-  const theme = "dark";
+  const { theme } = useTheme();
   return (
     <section className="background">
-      {theme === "light" ? (
+      {theme === "dark" ? (
         <picture>
           <source
             srcSet={BgDesktopLight}
