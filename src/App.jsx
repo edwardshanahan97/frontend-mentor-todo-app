@@ -1,5 +1,15 @@
+import Background from "./components/Background/Background";
+import Navbar from "./components/Navbar/Navbar";
+
 const App = () => {
-  return <h1>Todo App</h1>;
+  return (
+    <div className="app">
+      <Background />
+      <main>
+        <Navbar />
+      </main>
+    </div>
+  );
 };
 
 export default App;
