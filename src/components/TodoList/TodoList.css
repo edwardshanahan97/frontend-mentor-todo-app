@@ -1,0 +1,71 @@
+.todo {
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-content);
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+  gap: 1.6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.todo__checkbox {
+  display: flex;
+  cursor: pointer;
+}
+
+.todo__checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.todo__checkmark {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--color-circle);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.todo__checkmark img {
+  display: none;
+}
+
+.todo__checkbox input:checked + .todo__checkmark {
+  background: var(--gradient);
+  border: none;
+}
+
+.todo__checkbox input:checked + .todo__checkmark img {
+  display: block;
+}
+
+.todo__item:has(input:checked) .todo__text {
+  text-decoration: line-through;
+  color: var(--color-completed);
+}
+
+.todo__text {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.todo__remove {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.todo__remove img {
+  width: 1.2rem;
+  height: 1.2rem;
+}

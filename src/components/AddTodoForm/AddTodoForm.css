@@ -2,6 +2,7 @@
   background-color: var(--bg-content);
   width: 100%;
   padding: 1.4rem 2.4rem;
+  margin-bottom: 1.6rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -15,8 +16,8 @@
 .add-todo__circle {
   border: 1px solid var(--color-circle);
   border-radius: 100%;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   display: block;
 }
 
@@ -34,9 +35,15 @@
   font-family: var(--font-primary);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .add-todo {
+    margin-bottom: 2.4rem;
     padding: 2rem 2.4rem;
+  }
+
+  .add-todo__circle {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .add-todo label {

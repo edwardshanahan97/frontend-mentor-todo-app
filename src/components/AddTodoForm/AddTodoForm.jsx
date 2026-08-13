@@ -1,6 +1,8 @@
+import { useTodo } from "../../context/TodoContext";
 import "./AddTodoForm.css";
 
 const AddTodoForm = () => {
+  const { todoList, addTodo } = useTodo();
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -8,9 +10,13 @@ const AddTodoForm = () => {
 
     const todo = data.get("todo");
 
+    const id = crypto.randomUUID();
+
+    addTodo(todo, id);
+
     event.currentTarget.reset();
 
-    console.log(todo.trim(""));
+    console.log(todoList);
   };
   return (
     <form onSubmit={handleSubmit} className="add-todo">

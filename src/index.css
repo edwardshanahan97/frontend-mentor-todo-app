@@ -7,28 +7,29 @@
 :root {
   --color--white: #fff;
   --color-text-secondary: #9495a5;
+  --gradient: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   --border-radius: 0.5rem;
   --font-primary: "Josefin Sans", sans-serif;
+  --box-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
 }
 
 [data-theme="light"] {
   --color-text: #494c6b;
-  --color-done: #c8cbe7;
+  --color-completed: #c8cbe7;
   --color-circle: #979797;
+  --color-border: #c8cbe7;
   --bg-main: #fafafa;
   --bg-content: #fff;
-  --box-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
-  --gradient: linear-gradient(135deg, #55ddff 0%, #c058f3, 100%);
 }
 
 [data-theme="dark"] {
   --color-text: #e3e4f1;
-  --color-done: #4d5067;
-  --color-circle: #393a4b;
+  --color-completed: #4d5067;
+  --color-circle: #979797;
+  --color-border: #393a4b;
   --bg-main: #171823;
   --bg-content: #25273d;
   --box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
-  --gradient: linear-gradient(135deg, #3710bd 0%, #a42395 100%);
 }
 
 /* Global */
