@@ -2,6 +2,7 @@ import AddTodoForm from "./components/AddTodoForm/AddTodoForm";
 import Background from "./components/Background/Background";
 import Navbar from "./components/Navbar/Navbar";
 import TodoList from "./components/TodoList/TodoList";
+import TodoTabs from "./components/TodoTabs/TodoTabs";
 import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
         <AddTodoForm />
 
         <TodoList />
+
+        <TodoTabs className="todo__tabs-mobile" />
       </main>
     </div>
   );

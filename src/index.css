@@ -6,7 +6,7 @@
 
 :root {
   --color--white: #fff;
-  --color-text-secondary: #9495a5;
+  --color-primary: #3a7cfd;
   --gradient: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   --border-radius: 0.5rem;
   --font-primary: "Josefin Sans", sans-serif;
@@ -15,6 +15,7 @@
 
 [data-theme="light"] {
   --color-text: #494c6b;
+  --color-text-secondary: #5b5e7e;
   --color-completed: #c8cbe7;
   --color-circle: #979797;
   --color-border: #c8cbe7;
@@ -24,6 +25,7 @@
 
 [data-theme="dark"] {
   --color-text: #e3e4f1;
+  --color-text-secondary: #979797;
   --color-completed: #4d5067;
   --color-circle: #979797;
   --color-border: #393a4b;

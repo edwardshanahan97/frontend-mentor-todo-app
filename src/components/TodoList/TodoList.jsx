@@ -2,16 +2,37 @@ import { useTodo } from "../../context/TodoContext";
 import "./TodoList.css";
 import CheckIcon from "../../assets/icons/icon-check.svg";
 import RemoveIcon from "../../assets/icons/icon-remove.svg";
+import TodoTabs from "../TodoTabs/TodoTabs";
 
 const TodoList = () => {
-  const { todoList } = useTodo();
+  const { todoList, clearTodoList, completeTodo, filter } = useTodo();
+
+  const count = todoList.filter((todo) => todo.completed === false).length;
+
+  let filteredTodos = todoList;
+
+  if (filter === "completed") {
+    filteredTodos = todoList.filter((todo) => todo.completed === true);
+  } else if (filter === "active") {
+    filteredTodos = todoList.filter((todo) => todo.completed === false);
+  } else {
+    filteredTodos = todoList;
+  }
+
   return (
     <section className="todo">
       <ul className="todo__list">
-        {todoList.map((todo) => (
+        {filteredTodos.map((todo) => (
           <li className="todo__item" key={todo.id}>
             <label className="todo__checkbox">
-              <input type="checkbox" />
+              <input
+                onChange={(event) =>
+                  completeTodo(todo.id, event.target.checked)
+                }
+                type="checkbox"
+                value={todo.completed}
+                checked={todo.completed}
+              />
 
               <span className="todo__checkmark">
                 <img src={CheckIcon} alt="Check Icon" />
@@ -28,27 +49,13 @@ const TodoList = () => {
       </ul>
 
       <div className="todo__controls">
-        <div className="todo__footer">
-          <p className="todo__count">5 items left</p>
+        <p className="todo__count">{count} items left</p>
 
-          <button className="todo__clear" type="button">
-            Clear Completed
-          </button>
-        </div>
+        <TodoTabs className="todo__tabs-desktop" />
 
-        <div className="todo__tabs">
-          <button className="todo__tab todo__tab--active" type="button">
-            All
-          </button>
-
-          <button className="todo__tab" type="button">
-            Active
-          </button>
-
-          <button className="todo__tab" type="button">
-            Completed
-          </button>
-        </div>
+        <button onClick={clearTodoList} className="todo__clear" type="button">
+          Clear Completed
+        </button>
       </div>
     </section>
   );
