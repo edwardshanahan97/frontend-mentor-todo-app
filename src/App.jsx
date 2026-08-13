@@ -1,3 +1,4 @@
+import AddTodoForm from "./components/AddTodoForm/AddTodoForm";
 import Background from "./components/Background/Background";
 import Navbar from "./components/Navbar/Navbar";
 import { useTheme } from "./context/ThemeContext";
@@ -12,6 +13,8 @@ const App = () => {
       <Background />
       <main>
         <Navbar />
+
+        <AddTodoForm />
       </main>
     </div>
   );

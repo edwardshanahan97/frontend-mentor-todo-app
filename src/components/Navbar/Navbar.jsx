@@ -20,9 +20,9 @@ const Navbar = () => {
 
       <button onClick={toggleTheme} className="navbar__toggle">
         {theme === "dark" ? (
-          <img src={IconMoon} className="navbar__icon" alt="Moon Icon" />
-        ) : (
           <img src={IconSun} className="navbar__icon" alt="Sun Icon" />
+        ) : (
+          <img src={IconMoon} className="navbar__icon" alt="Moon Icon" />
         )}
       </button>
     </nav>

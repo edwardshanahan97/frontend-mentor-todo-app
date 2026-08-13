@@ -13,6 +13,7 @@ h1 {
 .navbar__toggle {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 1440px) {
