@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/edwardshanahan97/frontend-mentor-todo-app](https://github.com/edwardshanahan97/frontend-mentor-todo-app)
+- Live Site URL: [https://edwardshanahan97.github.io/frontend-mentor-todo-app/](https://edwardshanahan97.github.io/frontend-mentor-todo-app/)
 
 ## My process
 
@@ -48,43 +48,32 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- Responsive design
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
+- React
+- React Hooks
+- Vite
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+One of the main things I learned while building this project was how to manage and filter data in React based on user interaction.
 
-To see how you can add code snippets, see below:
+I used a filter state to determine which todos should be displayed. Depending on whether the user selects All, Active, or Completed, I use JavaScript's filter() method to create the appropriate list.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```js
+if (filter === "completed") {
+  filteredTodos = todoList.filter((todo) => todo.completed === true);
+} else if (filter === "active") {
+  filteredTodos = todoList.filter((todo) => todo.completed === false);
+} else {
+  filteredTodos = todoList;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I would like to add drag-and-drop functionality so users can reorder their todos and improve my understanding of updating item order in React state.
 
 ### Useful resources
 
