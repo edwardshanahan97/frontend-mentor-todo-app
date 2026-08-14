@@ -21,6 +21,8 @@ const App = () => {
         <TodoList />
 
         <TodoTabs className="todo__tabs-mobile" />
+
+        <div className="app__text">Drag and drop to reorder list</div>
       </main>
     </div>
   );

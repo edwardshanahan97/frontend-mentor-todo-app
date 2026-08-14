@@ -67,6 +67,13 @@ main {
   width: 100%;
 }
 
+.app__text {
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+}
+
 @media (min-width: 768px) {
   main {
     max-width: 54rem;

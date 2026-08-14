@@ -35,6 +35,14 @@
   font-family: var(--font-primary);
 }
 
+.add-todo input:-webkit-autofill,
+.add-todo input::-webkit-autofill:hover,
+.add-todo input::-webkit-autofill:focus,
+.add-todo input::-webkit-autofill:active {
+  transition: background-color 5500s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
 @media (min-width: 768px) {
   .add-todo {
     margin-bottom: 2.4rem;

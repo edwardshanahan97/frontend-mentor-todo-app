@@ -31,7 +31,6 @@ const TodoList = () => {
                   completeTodo(todo.id, event.target.checked)
                 }
                 type="checkbox"
-                value={todo.completed}
                 checked={todo.completed}
               />
 
