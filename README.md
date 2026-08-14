@@ -77,7 +77,7 @@ I would like to add drag-and-drop functionality so users can reorder their todos
 
 ### Useful resources
 
-- [Remove Google Auto Fill Background](https://docs.github.com/en/rest/users/users) - Useful for understanding how to remove Google auto fill on inputs when form is submitted
+- [Remove Google Auto Fill Background](https://medium.com/@LeapHawk/removing-google-chrome-auto-fill-input-field-yellow-background-36ad98171f7d) - Useful for understanding how to remove Google auto fill on inputs when form is submitted
 
 ## Getting Started
 
