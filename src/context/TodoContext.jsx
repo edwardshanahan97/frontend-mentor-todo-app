@@ -24,10 +24,8 @@ export const TodoProvider = ({ children }) => {
     });
   };
 
-  const completedTodos = () =>
-    setTodoList(todoList.filter((todo) => todo.completed === true));
-
-  const allTodos = () => todoList.filter((todo) => todo);
+  const removeTodo = (id) =>
+    setTodoList((prev) => prev.filter((todo) => todo.id !== id));
 
   return (
     <TodoContext.Provider
@@ -35,10 +33,9 @@ export const TodoProvider = ({ children }) => {
         todoList,
         addTodo,
         clearTodoList,
-        allTodos,
         completeTodo,
-        completedTodos,
         setFilter,
+        removeTodo,
         filter,
       }}
     >

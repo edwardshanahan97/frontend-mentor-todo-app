@@ -5,7 +5,8 @@ import RemoveIcon from "../../assets/icons/icon-remove.svg";
 import TodoTabs from "../TodoTabs/TodoTabs";
 
 const TodoList = () => {
-  const { todoList, clearTodoList, completeTodo, filter } = useTodo();
+  const { todoList, clearTodoList, completeTodo, filter, removeTodo } =
+    useTodo();
 
   const count = todoList.filter((todo) => todo.completed === false).length;
 
@@ -41,7 +42,10 @@ const TodoList = () => {
 
             <span className="todo__text">{todo.text}</span>
 
-            <button className="todo__remove">
+            <button
+              onClick={() => removeTodo(todo.id)}
+              className="todo__remove"
+            >
               <img src={RemoveIcon} alt="Remove Icon" />
             </button>
           </li>
